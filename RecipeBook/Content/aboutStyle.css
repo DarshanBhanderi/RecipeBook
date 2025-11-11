@@ -1,0 +1,78 @@
+﻿/* Scoped styles for About Page */
+#about-page {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay for the main area */
+    padding: 2rem;
+    border-radius: 8px;
+}
+    /* Dark theme background and text colors */
+    body {
+
+        background-image: url('https://wallpapercave.com/wp/wp11872862.jpg'); /* Background image for About page */
+        background-size: cover;
+        background-position: top;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Styling for the sections and headings */
+    #about-page h2, #about-page h3, #about-page h4 {
+        color: #ffb703; /* Warm accent color for headings */
+        font-weight: bold;
+        font-size: 3rem;
+    }
+
+    #about-page h3 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+    }
+
+    /* Background image and section layout */
+    #about-page .section {
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        padding: 2rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+        #about-page .section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+    #about-page .section-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Link and button styling with hover effects */
+    #about-page a, #about-page .btn {
+        color: #ffb703;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+        #about-page a:hover, #about-page .btn:hover {
+            color: #f4a261;
+        }
+
+    /* List item hover effect */
+    #about-page ul li {
+        transition: color 0.3s ease;
+        font-size: 2rem;
+    }
+
+        #about-page ul li:hover, #about-page p:hover {
+            color: #f4a261;
+        }
+
+    #about-page p {
+        font-size: 2rem;
+    }

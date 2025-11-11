@@ -1,0 +1,31 @@
+﻿﻿@model IEnumerable<RecipeBook.Models.Recipe>
+
+@{
+    ViewBag.Title = "Recipes";
+}
+
+<link rel="stylesheet" href="~/Content/viewIndexStyle.css" />
+
+<div class="main">
+    <h2>Recipes</h2>
+
+    <p>
+        @Html.ActionLink("Create New Recipe", "Create", null, new { @class = "butn mx-5" })
+    </p>
+
+    <div class="recipe-container">
+        @foreach (var recipe in Model)
+        {
+            <div class="recipe-card">
+                <div class="recipe-card-title">@recipe.Title</div>
+                <div class="recipe-card-date">Created At: @recipe.CreatedAt.ToShortDateString()</div>
+
+                <div class="recipe-card-actions mt-3">
+                    @Html.ActionLink("View", "Details", new { id = recipe.RecipeID }, new { @class = "btn btn-primary btn-sm" })
+                    @Html.ActionLink("Edit", "Edit", new { id = recipe.RecipeID }, new { @class = "btn btn-warning btn-sm" })
+                    @Html.ActionLink("Delete", "Delete", new { id = recipe.RecipeID }, new { @class = "btn btn-danger btn-sm" })
+                </div>
+            </div>
+        }
+    </div>
+</div>

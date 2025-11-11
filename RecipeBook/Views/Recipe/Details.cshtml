@@ -1,0 +1,31 @@
+﻿@model RecipeBook.Models.Recipe
+
+@{
+    ViewBag.Title = "Recipe Details";
+}
+<link rel="stylesheet" href="~/Content/detailsStyle.css" />
+<div class="main">
+    <div class="details-card">
+        <h2>@Model.Title</h2>
+
+        <div class="details-section">
+            <h3>Ingredients</h3>
+            <p>@Model.Ingredients</p>
+        </div>
+
+        <div class="details-section">
+            <h3>Instructions</h3>
+            <p>@Model.Instructions</p>
+        </div>
+
+        <div class="details-section">
+            <h3>Created At</h3>
+            <p>@Model.CreatedAt.ToShortDateString()</p>
+        </div>
+
+        <div class="details-actions">
+            @Html.ActionLink("Edit Recipe", "Edit", new { id = Model.RecipeID }, new { @class = "btn btn-edit" })
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-back" })
+        </div>
+    </div>
+</div>

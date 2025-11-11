@@ -1,0 +1,41 @@
+﻿@model RecipeBook.Models.Recipe
+
+@{
+    ViewBag.Title = "Edit Recipe";
+}
+<link rel="stylesheet" href="~/Content/createStyle.css" />
+
+<div class="main">
+    <h2>Edit Recipe</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.HiddenFor(model => model.RecipeID)
+
+        <div class="form_horizontal">
+            <div class="form_group">
+                @Html.LabelFor(model => model.Title, new { @class = "control-label" })
+                @Html.EditorFor(model => model.Title)
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "validation-message" })
+            </div>
+
+            <div class="form_group">
+                @Html.LabelFor(model => model.Ingredients, new { @class = "control-label" })
+                @Html.TextAreaFor(model => model.Ingredients)
+                @Html.ValidationMessageFor(model => model.Ingredients, "", new { @class = "validation-message" })
+            </div>
+
+            <div class="form_group">
+                @Html.LabelFor(model => model.Instructions, new { @class = "control-label" })
+                @Html.TextAreaFor(model => model.Instructions)
+                @Html.ValidationMessageFor(model => model.Instructions, "", new { @class = "validation-message" })
+            </div>
+
+            <div class="form_group">
+                <input type="submit" value="Save" />
+            </div>
+        </div>
+    }
+</div>

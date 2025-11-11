@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!-- Import Google Fonts in the <head> section -->
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Itim&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Itim&family=Pacifico&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Itim&family=Pacifico&family=Parisienne&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="~/Content/homeindexStyle.css"/>
+
+<div class="main">
+    <div>
+        <p class="label">Welcome to</p>
+        <p class="name"><span>Brother's</span> Kitchen</p>
+        <p class="moto">Where every plate holds a Memory and Every dish tells a Story</p>
+    </div>
+    <a href="@Url.Action("Create", "Recipe")" class="button-link">Get Started</a>
+</div>

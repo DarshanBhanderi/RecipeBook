@@ -1,0 +1,119 @@
+﻿
+body {
+    background-color: #2b2720;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    border-top: 2px solid #ffebcd;
+}
+
+h2 {
+    text-align: center;
+    color: #ffebcd;
+    font-size: 2rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.form_horizontal {
+    background-color: burlywood;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 95%; /* Limits form width for readability */
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form_group {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    color: #2b2720;
+    flex-direction: column;
+}
+
+    .form_group label {
+        margin-bottom: 0.5rem;
+        font-size: 2rem;
+        color: #2b2720;
+        font-weight: bold;
+        display: flex;
+    }
+
+textarea, input[type="text"] {
+    all: unset;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 2rem;
+    background-color: white; /* Explicitly set background */
+    color: black;
+    resize: vertical; /* Allows vertical resizing only */
+    overflow-wrap: break-word;
+}
+
+textarea {
+    height: 300px;
+}
+
+    textarea:hover, input[type="text"]:hover {
+        border-radius: 8px; /* Rounded corners for the flame effect */
+        box-shadow: 0 -2px 8px -2px rgba(255, 85, 0, 0.6), /* Top center flame flicker */
+        0 -4px 10px -2px rgba(255, 140, 0, 0.5), /* Higher middle flame */
+        -3px -5px 12px -3px rgba(255, 200, 0, 0.4), /* Sideways flicker */
+        3px -7px 15px -3px rgba(255, 255, 0, 0.3); /* Side glow */
+        animation: flameGlow 0.6s infinite alternate-reverse;
+        color:black;
+    }
+
+input[type="submit"] {
+    
+    background-color: #ffebef;
+    color: #333;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width for submit button */
+    margin-top: 10px;
+}
+
+    input[type="submit"]:hover {
+        background-color: #2b2720;
+        color: #ffebcd;
+        box-shadow: 0 -2px 8px -2px rgba(255, 85, 0, 0.6), /* Top center flame flicker */
+        0 -4px 10px -2px rgba(255, 140, 0, 0.5), /* Higher middle flame */
+        -3px -5px 12px -3px rgba(255, 200, 0, 0.4), /* Sideways flicker */
+        3px -7px 15px -3px rgba(255, 255, 0, 0.3); /* Side glow */
+        animation: flameGlow 0.6s infinite alternate-reverse;
+    }
+
+    input[type="submit"]:focus {
+        outline: none;
+    }
+
+
+.validation-message {
+    color: red;
+    font-size: 2rem;
+}
+
+@keyframes flameGlow {
+    0% {
+        box-shadow: 0 -2px 8px -2px rgba(255, 85, 0, 0.6), 0 -4px 10px -2px rgba(255, 140, 0, 0.5), -3px -5px 12px -3px rgba(255, 200, 0, 0.4), 3px -7px 15px -3px rgba(255, 255, 0, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 -6px 12px -2px rgba(255, 85, 0, 0.7), 0 -8px 16px -3px rgba(255, 140, 0, 0.6), -3px -8px 18px -3px rgba(255, 200, 0, 0.5), 3px -10px 20px -3px rgba(255, 255, 0, 0.4);
+    }
+}
+
+
